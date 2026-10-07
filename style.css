@@ -665,6 +665,118 @@ footer {
   margin-top: 10px;
 }
 
+[hidden] {
+  display: none !important;
+}
+
+.order-panel {
+  margin-top: 32px;
+  padding: 28px;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background: var(--panel);
+  box-shadow: 0 18px 40px var(--shadow);
+}
+
+.order-header,
+.order-actions,
+.order-item,
+.order-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.order-header {
+  margin-bottom: 16px;
+}
+
+.order-header .eyebrow {
+  margin-bottom: 6px;
+}
+
+.order-header h3 {
+  margin: 0;
+  color: var(--ink);
+  font: 700 26px/1.2 Georgia, serif;
+}
+
+.order-count,
+.order-note {
+  margin: 0;
+  color: var(--ink-soft);
+}
+
+.order-items {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.order-item {
+  padding: 14px 0;
+  border-top: 1px solid var(--line);
+}
+
+.order-item-name {
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.order-controls {
+  gap: 10px;
+}
+
+.order-controls button,
+.clear-order {
+  min-width: 40px;
+  min-height: 40px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--panel-strong);
+  color: var(--ink);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.order-controls button:hover,
+.clear-order:hover {
+  border-color: var(--gold);
+}
+
+.order-note {
+  margin: 12px 0 20px;
+  font-size: 14px;
+}
+
+.clear-order {
+  padding: 10px 18px;
+}
+
+.send-order {
+  display: inline-block;
+  padding: 12px 20px;
+  border-radius: 999px;
+  background: var(--gold);
+  color: var(--bg);
+  font-weight: 800;
+  text-align: center;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 @media (max-width: 900px) {
   .hero-grid,
   .about-grid,
@@ -737,6 +849,25 @@ footer {
   .section-head h2,
   .banner h2 {
     font-size: 32px;
+  }
+
+  .order-panel {
+    padding: 22px 18px;
+  }
+
+  .order-header,
+  .order-actions,
+  .order-item {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .order-controls {
+    align-self: stretch;
+  }
+
+  .send-order {
+    width: 100%;
   }
 }
 

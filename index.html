@@ -17,7 +17,7 @@
   <meta name="twitter:description" content="Uma curadoria de presentes de Natal para surpreender em todas as idades e faixas de preço.">
   <meta name="twitter:image" content="https://images.unsplash.com/photo-1513885535751-8b9238bd345a?auto=format&amp;fit=crop&amp;w=1200&amp;q=85">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <link rel="stylesheet" href="style.css?v=20261007">
+  <link rel="stylesheet" href="style.css?v=20261007-pedidos">
 </head>
 <body>
 <a class="skip-link" href="#conteudo-principal">Pular para o conteúdo</a>
@@ -131,7 +131,7 @@
             <div class="price">Até R$ 50</div>
             <span class="small-meta">Presente acessível</span>
           </div>
-          <a class="buy" href="https://wa.me/559291117526?text=Quero%20consultar%20a%20Vela%20Aromatica%20Canela%20e%20Pinho." target="_blank" rel="noopener noreferrer">Consultar pelo WhatsApp</a>
+          <a class="buy" href="https://wa.me/559291117526?text=Quero%20consultar%20a%20Vela%20Aromatica%20Canela%20e%20Pinho." target="_blank" rel="noopener noreferrer">Adicionar ao pedido</a>
         </div>
       </article>
 
@@ -145,7 +145,7 @@
             <div class="price">Até R$ 100</div>
             <span class="small-meta">Momento de cuidado</span>
           </div>
-          <a class="buy" href="https://wa.me/559291117526?text=Quero%20consultar%20o%20Kit%20Cafe%20e%20Aconchego." target="_blank" rel="noopener noreferrer">Consultar pelo WhatsApp</a>
+          <a class="buy" href="https://wa.me/559291117526?text=Quero%20consultar%20o%20Kit%20Cafe%20e%20Aconchego." target="_blank" rel="noopener noreferrer">Adicionar ao pedido</a>
         </div>
       </article>
 
@@ -159,7 +159,7 @@
             <div class="price">Até R$ 200</div>
             <span class="small-meta">Brincadeira criativa</span>
           </div>
-          <a class="buy" href="https://wa.me/559291117526?text=Quero%20consultar%20o%20Trem%20de%20Madeira%20de%20Natal." target="_blank" rel="noopener noreferrer">Consultar pelo WhatsApp</a>
+          <a class="buy" href="https://wa.me/559291117526?text=Quero%20consultar%20o%20Trem%20de%20Madeira%20de%20Natal." target="_blank" rel="noopener noreferrer">Adicionar ao pedido</a>
         </div>
       </article>
 
@@ -173,7 +173,7 @@
             <div class="price">Até R$ 100</div>
             <span class="small-meta">Decoração natalina</span>
           </div>
-          <a class="buy" href="https://wa.me/559291117526?text=Quero%20consultar%20o%20Enfeite%20de%20Arvore%20Dourado." target="_blank" rel="noopener noreferrer">Consultar pelo WhatsApp</a>
+          <a class="buy" href="https://wa.me/559291117526?text=Quero%20consultar%20o%20Enfeite%20de%20Arvore%20Dourado." target="_blank" rel="noopener noreferrer">Adicionar ao pedido</a>
         </div>
       </article>
 
@@ -187,7 +187,7 @@
             <div class="price">Até R$ 50</div>
             <span class="small-meta">Pequeno gesto</span>
           </div>
-          <a class="buy" href="https://wa.me/559291117526?text=Quero%20consultar%20a%20Caixa%20Presenteavel%20de%20Natal." target="_blank" rel="noopener noreferrer">Consultar pelo WhatsApp</a>
+          <a class="buy" href="https://wa.me/559291117526?text=Quero%20consultar%20a%20Caixa%20Presenteavel%20de%20Natal." target="_blank" rel="noopener noreferrer">Adicionar ao pedido</a>
         </div>
       </article>
 
@@ -201,10 +201,27 @@
             <div class="price">Especial</div>
             <span class="small-meta">Presente para dividir</span>
           </div>
-          <a class="buy" href="https://wa.me/559291117526?text=Quero%20consultar%20o%20Kit%20de%20Natal%20para%20Anfitri%C3%B5es." target="_blank" rel="noopener noreferrer">Consultar pelo WhatsApp</a>
+          <a class="buy" href="https://wa.me/559291117526?text=Quero%20consultar%20o%20Kit%20de%20Natal%20para%20Anfitri%C3%B5es." target="_blank" rel="noopener noreferrer">Adicionar ao pedido</a>
         </div>
       </article>
     </div>
+
+    <section class="order-panel" id="order-panel" aria-labelledby="order-title" hidden>
+      <div class="order-header">
+        <div>
+          <p class="eyebrow">SEU PEDIDO</p>
+          <h3 id="order-title">Confira os presentes escolhidos</h3>
+        </div>
+        <p id="order-count" class="order-count" aria-live="polite"></p>
+      </div>
+      <ul class="order-items" id="order-items"></ul>
+      <p class="order-note">Vamos confirmar disponibilidade, preço final e entrega pelo WhatsApp.</p>
+      <div class="order-actions">
+        <button class="clear-order" id="clear-order" type="button">Limpar pedido</button>
+        <a class="send-order" id="send-order" href="https://wa.me/559291117526" target="_blank" rel="noopener noreferrer">Enviar pedido pelo WhatsApp</a>
+      </div>
+    </section>
+    <p class="visually-hidden" id="order-status" role="status" aria-live="polite"></p>
   </div>
 </section>
 
@@ -295,6 +312,6 @@
   </div>
   <div class="copyright">© 2026 Bem Presente. Todos os direitos reservados.</div>
 </footer>
-<script src="script.js"></script>
+<script src="script.js?v=20261007-pedidos"></script>
 </body>
 </html>

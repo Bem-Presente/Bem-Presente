@@ -11,6 +11,7 @@ Site estático pronto para uso e publicação gratuita.
 ## Como personalizar
 - Troque os produtos, preços e textos no arquivo `index.html`.
 - Ajuste o número do WhatsApp nos links `wa.me`.
+- Na loja, o cliente pode montar um pedido com vários produtos e quantidades e enviá-lo pelo WhatsApp; disponibilidade, preço final e entrega são confirmados no atendimento.
 - Edite os artigos do blog em `artigo-*.html`.
 - Configure a identidade visual em `style.css`.
 
