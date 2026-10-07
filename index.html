@@ -49,7 +49,7 @@
   <meta name="twitter:description" content="30 ideias de presentes de Natal para casa, crianças, amigos e anfitriões. Monte seu pedido pelo WhatsApp.">
   <meta name="twitter:image" content="https://images.unsplash.com/photo-1513885535751-8b9238bd345a?auto=format&amp;fit=crop&amp;w=1200&amp;q=85">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <link rel="stylesheet" href="style.css?v=20261007-pwa-desktop">
+  <link rel="stylesheet" href="style.css?v=20261007-client-experience">
 </head>
 <body>
 <a class="skip-link" href="#conteudo-principal">Pular para o conteúdo</a>
@@ -63,6 +63,7 @@
     <nav id="menu" aria-label="Navegação principal">
       <a href="#inicio">Início</a>
       <a href="#produtos">Loja</a>
+      <a href="#area-cliente">Seu espaço</a>
       <a href="#blog">Blog</a>
       <a href="#sobre">Sobre</a>
       <a class="nav-cta" href="https://wa.me/559291117526" target="_blank" rel="noopener noreferrer">WhatsApp</a>
@@ -204,6 +205,74 @@
       <span>Qualidade premium</span>
       <span>Presentes memoráveis</span>
       <span>Decoração acolhedora</span>
+    </div>
+  </div>
+</section>
+
+<section class="section customer-hub-section" id="area-cliente" aria-labelledby="customer-hub-title">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">ATENDIMENTO PERSONALIZADO</p>
+        <h2 id="customer-hub-title">Seu espaço Bem Presente</h2>
+      </div>
+      <p>Conte só o tipo de presente que procura. Vamos sugerir ideias sem pedir nem guardar seus dados pessoais.</p>
+    </div>
+    <div class="customer-hub-grid">
+      <div class="gift-assistant-panel">
+        <p class="customer-panel-kicker">ASSISTENTE DE PRESENTES</p>
+        <h3>Uma ideia que combina com a ocasião</h3>
+        <p class="customer-panel-copy">Escolha algumas preferências para ver sugestões do catálogo.</p>
+        <form class="gift-assistant-form" id="gift-assistant">
+          <label for="gift-recipient">
+            Para quem é o presente?
+            <select id="gift-recipient" name="recipient">
+              <option value="todos">Quero explorar todas as opções</option>
+              <option value="para-ela">Para ela</option>
+              <option value="para-ele">Para ele</option>
+              <option value="criancas">Para criança</option>
+              <option value="amigo-secreto">Para amigo secreto</option>
+              <option value="casa">Para casa</option>
+              <option value="gourmet">Para quem gosta de sabores</option>
+            </select>
+          </label>
+          <label for="gift-occasion">
+            Qual é a ocasião?
+            <select id="gift-occasion" name="occasion">
+              <option value="natal">Natal</option>
+              <option value="amigo-secreto">Amigo secreto</option>
+              <option value="aniversario">Aniversário</option>
+              <option value="agradecimento">Agradecimento</option>
+              <option value="casa-nova">Casa nova</option>
+              <option value="sem-data">Só quero surpreender</option>
+            </select>
+          </label>
+          <label for="gift-budget">
+            Qual faixa de preço quer explorar?
+            <select id="gift-budget" name="budget">
+              <option value="todos">Sem limite definido</option>
+              <option value="50">Até R$ 50</option>
+              <option value="80">Até R$ 80</option>
+              <option value="100">Até R$ 100</option>
+              <option value="150">Até R$ 150</option>
+              <option value="200">Até R$ 200</option>
+              <option value="250">Até R$ 250</option>
+            </select>
+          </label>
+          <button class="btn primary gift-assistant-submit" type="submit">Encontrar minhas sugestões</button>
+        </form>
+        <p class="gift-assistant-disclaimer">Produtos e faixas são ilustrativos. Confirme disponibilidade, preço e entrega pelo WhatsApp.</p>
+        <div class="gift-assistant-results" id="gift-assistant-results" aria-live="polite" hidden></div>
+      </div>
+
+      <aside class="customer-promotions-panel" aria-labelledby="customer-promotions-title">
+        <span class="customer-promotions-icon" aria-hidden="true">✦</span>
+        <p class="customer-panel-kicker">NOVIDADES COM SEU OK</p>
+        <h3 id="customer-promotions-title">Inspiração e promoções pelo WhatsApp</h3>
+        <p>Peça para receber novidades e ofertas confirmadas. A página não salva seu telefone nem envia mensagens automaticamente: a conversa só começa se você abrir o WhatsApp e enviar a mensagem.</p>
+        <a class="btn customer-promotions-cta" href="https://wa.me/559291117526?text=Ol%C3%A1!%20Quero%20receber%20novidades%20e%20promo%C3%A7%C3%B5es%20da%20Bem%20Presente%20pelo%20WhatsApp.%20Sei%20que%20posso%20pedir%20para%20parar%20a%20qualquer%20momento." target="_blank" rel="noopener noreferrer">Quero receber novidades</a>
+        <small>Descontos só devem ser divulgados após confirmar produtos, preço, prazo e disponibilidade. Você pode pedir para parar as mensagens a qualquer momento.</small>
+      </aside>
     </div>
   </div>
 </section>
@@ -754,6 +823,7 @@
     <div>
       <strong>Links</strong>
       <a href="#produtos">Loja</a>
+      <a href="#area-cliente">Seu espaço</a>
       <a href="#blog">Blog</a>
       <a href="#sobre">Sobre</a>
     </div>
@@ -764,6 +834,6 @@
   </div>
   <div class="copyright">© 2026 Bem Presente. Todos os direitos reservados.</div>
 </footer>
-<script src="script.js?v=20261007-pwa-desktop"></script>
+<script src="script.js?v=20261007-client-experience"></script>
 </body>
 </html>

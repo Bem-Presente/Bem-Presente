@@ -13,6 +13,8 @@ Site estático pronto para uso e publicação gratuita.
 - Ajuste o número do WhatsApp nos links `wa.me`.
 - Na loja, o cliente pode montar um pedido com vários produtos e quantidades e enviá-lo pelo WhatsApp; disponibilidade, preço final e entrega são confirmados no atendimento.
 - O catálogo tem busca e filtros por categoria. As 30 ideias, imagens e faixas de preço são ilustrativas; confirme os produtos reais e os preços antes de divulgar a oferta.
+- A área **Seu espaço Bem Presente** sugere produtos no próprio navegador conforme categoria, ocasião e faixa ilustrativa. As escolhas não são salvas nem enviadas automaticamente.
+- O link de novidades abre uma conversa voluntária no WhatsApp; não há cadastro, lista de contatos nem disparo automático nesta versão. Descontos só podem ser anunciados depois de confirmar produtos participantes, preço, período, disponibilidade e condições. Nenhum percentual promocional foi definido neste site.
 - O SEO básico informa a marca `Bem Presente`, inclui URLs canônicas nas páginas principais e lista as páginas públicas em `sitemap.xml`, referenciado por `robots.txt`. Para pedir a indexação ao Google, adicione o domínio `lojabempresente.com.br` no Google Search Console, conclua a verificação de propriedade, envie `https://lojabempresente.com.br/sitemap.xml` e solicite a indexação da página inicial. A indexação e a posição nos resultados dependem do Google e não são imediatas nem garantidas.
 - O layout se adapta a celulares, tablets e computadores, incluindo navegação, catálogo e artigos.
 - As imagens do catálogo usam tamanhos ajustados para telas comuns e carregamento adiado; as coleções viram cartões horizontais em celulares. Controles de teclado exibem foco visível, e o menu móvel pode ser fechado com Escape.

@@ -21,6 +21,9 @@ Se for necessário reconstruir a zona DNS do GitHub Pages, confirme primeiro as 
 - Formato usado nos links `wa.me`: `559291117526`
 - Os botões do catálogo e o carrinho direcionam para o WhatsApp.
 - Confirme disponibilidade, preço final, composição e entrega antes de anunciar uma oferta.
+- A área “Seu espaço Bem Presente” faz sugestões localmente no navegador; não coleta nem guarda nome, telefone ou preferências.
+- O botão de novidades abre uma mensagem pré-preenchida. Só haverá contato se a pessoa abrir o WhatsApp e enviar a mensagem; não existe CRM, lista de clientes nem envio automático.
+- Não há percentual de desconto ativo configurado pelo site. Antes de divulgar um desconto, confirme produtos incluídos, preço normal e promocional, validade, estoque e demais condições. Os valores do catálogo são ilustrativos, não preços de venda.
 
 ## Google Search Console e indexação
 
@@ -36,6 +39,7 @@ Se for necessário reconstruir a zona DNS do GitHub Pages, confirme primeiro as 
 
 - O catálogo tem 30 sugestões, busca, filtros e coleções interativas.
 - Produtos, imagens e faixas de preço são ilustrativos; não indicam estoque confirmado.
+- O assistente “Seu espaço Bem Presente” combina categoria, ocasião e faixa ilustrativa para sugerir ideias; os dados ficam apenas na página aberta. Ofertas e descontos são confirmados manualmente no WhatsApp, sem cadastro ou campanhas automáticas.
 - As imagens usam carregamento adiado onde apropriado e tamanhos ajustados para reduzir dados carregados.
 - O menu pode ser usado pelo teclado; `Esc` fecha o menu móvel e devolve o foco ao botão.
 - Os estilos incluem foco visível e respeitam a preferência de redução de movimento do dispositivo.
