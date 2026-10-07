@@ -1,9 +1,9 @@
-const CACHE_NAME = "bem-presente-app-v2";
+const CACHE_NAME = "bem-presente-app-v3";
 const APP_SHELL = [
   "/",
   "/index.html",
-  "/style.css?v=20261007-client-experience",
-  "/script.js?v=20261007-client-experience",
+  "/style.css?v=20261007-mobile-readability",
+  "/script.js?v=20261007-mobile-readability",
   "/manifest.webmanifest",
   "/favicon.svg",
   "/app-icon-192.png",
