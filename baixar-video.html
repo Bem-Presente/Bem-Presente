@@ -29,12 +29,11 @@
       }
 
       main {
-        width: min(100%, 560px);
-        padding: clamp(28px, 7vw, 52px);
+        width: min(100%, 980px);
+        padding: clamp(24px, 5vw, 52px);
         border: 1px solid rgba(240, 201, 104, 0.25);
         border-radius: 24px;
         background: rgba(12, 31, 24, 0.9);
-        text-align: center;
         box-shadow: 0 24px 70px rgba(0, 0, 0, 0.3);
       }
 
@@ -43,21 +42,66 @@
         color: #f0c968;
         font-weight: 800;
         letter-spacing: 0.16em;
+        text-align: center;
       }
 
       h1 {
         margin: 0;
         font: 700 clamp(32px, 7vw, 46px)/1.1 Georgia, serif;
+        text-align: center;
       }
 
-      p {
-        margin: 16px 0 28px;
+      .intro {
+        margin: 16px 0 32px;
         color: #c5cfc8;
         line-height: 1.6;
+        text-align: center;
+      }
+
+      .videos {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+        gap: 20px;
+      }
+
+      .video-card {
+        overflow: hidden;
+        border: 1px solid rgba(240, 201, 104, 0.18);
+        border-radius: 18px;
+        background: rgba(6, 18, 14, 0.72);
+      }
+
+      .video-card img {
+        display: block;
+        width: 100%;
+        aspect-ratio: 9 / 16;
+        object-fit: cover;
+        object-position: center 30%;
+        background: #14251d;
+      }
+
+      .video-copy {
+        display: grid;
+        gap: 10px;
+        padding: 18px;
+      }
+
+      h2 {
+        margin: 0;
+        font: 700 22px/1.2 Georgia, serif;
+      }
+
+      .video-copy p {
+        min-height: 48px;
+        margin: 0;
+        color: #c5cfc8;
+        font-size: 14px;
+        line-height: 1.55;
       }
 
       .download {
         display: inline-flex;
+        width: 100%;
         min-height: 54px;
         align-items: center;
         justify-content: center;
@@ -67,6 +111,7 @@
         color: #102018;
         font-weight: 800;
         text-decoration: none;
+        text-align: center;
       }
 
       .download:focus-visible,
@@ -76,24 +121,53 @@
       }
 
       .hint {
-        margin-bottom: 0;
+        margin: 28px 0 0;
+        color: #c5cfc8;
         font-size: 14px;
+        text-align: center;
       }
 
       .back {
         display: inline-block;
-        margin-top: 24px;
+        width: 100%;
+        margin-top: 20px;
         color: #f0c968;
+        text-align: center;
       }
     </style>
   </head>
   <body>
     <main>
       <p class="brand">BEM PRESENTE</p>
-      <h1>Seu vídeo está pronto</h1>
-      <p>Clique no botão abaixo para baixar o vídeo promocional no computador.</p>
-      <a class="download" href="video-anuncio-bem-presente.mp4" download="video-bem-presente.mp4">Baixar vídeo MP4</a>
-      <p class="hint">Se o download não começar, clique com o botão direito no botão e escolha “Salvar link como…”.</p>
+      <h1>Baixe seus vídeos de divulgação</h1>
+      <p class="intro">Escolha um vídeo e clique no botão para baixar o arquivo MP4 no computador.</p>
+      <div class="videos">
+        <article class="video-card">
+          <img src="capa-video-anuncio.jpg" alt="Capa do vídeo Bem Presente: um presente pode dizer muito" loading="lazy" decoding="async">
+          <div class="video-copy">
+            <h2>Um presente pode dizer muito</h2>
+            <p>Uma mensagem delicada sobre presentear com carinho.</p>
+            <a class="download" href="video-anuncio-bem-presente.mp4" download="video-bem-presente.mp4">Baixar vídeo MP4</a>
+          </div>
+        </article>
+        <article class="video-card">
+          <img src="capa-video-bem-presente-carinho.jpg" alt="Capa do vídeo sobre presentes escolhidos com carinho" loading="lazy" decoding="async">
+          <div class="video-copy">
+            <h2>Um presente com carinho</h2>
+            <p>Uma homenagem aos pequenos gestos e às pessoas especiais.</p>
+            <a class="download" href="video-bem-presente-carinho.mp4" download="video-bem-presente-carinho.mp4">Baixar vídeo MP4</a>
+          </div>
+        </article>
+        <article class="video-card">
+          <img src="capa-video-bem-presente-ideias.jpg" alt="Capa do vídeo com ideias para presentear em diferentes ocasiões" loading="lazy" decoding="async">
+          <div class="video-copy">
+            <h2>Ideias para presentear</h2>
+            <p>Um convite rápido para explorar coleções e encontrar inspiração.</p>
+            <a class="download" href="video-bem-presente-ideias-para-presentear.mp4" download="video-bem-presente-ideias.mp4">Baixar vídeo MP4</a>
+          </div>
+        </article>
+      </div>
+      <p class="hint">Se o download não começar, clique no botão com o lado direito do mouse e escolha “Salvar link como…”.</p>
       <a class="back" href="https://lojabempresente.com.br/">Voltar para a loja</a>
     </main>
   </body>
