@@ -19,6 +19,13 @@ if (menuButton && menu) {
       closeMenu();
     }
   });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && menu.classList.contains("is-open")) {
+      closeMenu();
+      menuButton.focus();
+    }
+  });
 }
 
 const productLinks = document.querySelectorAll(".product-card .buy");

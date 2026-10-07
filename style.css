@@ -62,7 +62,8 @@ img {
 }
 
 a:focus-visible,
-button:focus-visible {
+button:focus-visible,
+input:focus-visible {
   outline: 3px solid var(--gold-deep);
   outline-offset: 4px;
 }
@@ -158,7 +159,7 @@ nav a {
   padding: clamp(40px, 6vw, 76px) 0;
   background:
     linear-gradient(90deg, hsl(158 42% 5% / 0.94), hsl(158 42% 5% / 0.64)),
-    url("https://images.unsplash.com/photo-1513885535751-8b9238bd345a?auto=format&fit=crop&w=1800&q=85") center 48% / cover no-repeat;
+    url("https://images.unsplash.com/photo-1513885535751-8b9238bd345a?auto=format&fit=crop&w=1400&q=78") center 48% / cover no-repeat;
   border-bottom: 1px solid var(--line);
 }
 
@@ -306,16 +307,13 @@ nav a {
 }
 
 .hero-media img {
-  transform: translateZ(22px);
-  transition: transform 220ms ease;
-}
-
-.hero-media img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 30px;
   box-shadow: 0 25px 60px rgba(60, 40, 20, 0.14);
+  transform: translateZ(22px);
+  transition: transform 220ms ease;
 }
 
 .media-card {
@@ -534,6 +532,12 @@ nav a {
   object-fit: cover;
 }
 
+.product-card,
+.blog-card {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 480px;
+}
+
 .product-body {
   display: flex;
   flex: 1;
@@ -680,7 +684,7 @@ nav a {
   --tilt-y: 0deg;
   position: relative;
   background: linear-gradient(90deg, rgba(26, 20, 17, 0.82), rgba(26, 20, 17, 0.5)),
-    url('https://images.unsplash.com/photo-1513885535751-8b9238bd345a?auto=format&fit=crop&w=1600&q=85') center/cover no-repeat;
+    url('https://images.unsplash.com/photo-1513885535751-8b9238bd345a?auto=format&fit=crop&w=1200&q=78') center/cover no-repeat;
   border-radius: 32px;
   padding: 64px 60px;
   display: flex;
@@ -1550,7 +1554,7 @@ nav a,
 
 .banner-inner {
   background-image: linear-gradient(90deg, hsl(158 42% 5% / 0.9), hsl(158 42% 5% / 0.58)),
-    url('https://images.unsplash.com/photo-1513885535751-8b9238bd345a?auto=format&fit=crop&w=1600&q=85');
+    url('https://images.unsplash.com/photo-1513885535751-8b9238bd345a?auto=format&fit=crop&w=1200&q=78');
   box-shadow: 0 18px 42px rgba(0, 0, 0, 0.12);
 }
 
