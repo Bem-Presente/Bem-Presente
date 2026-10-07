@@ -43,7 +43,7 @@ Se for necessário reconstruir a zona DNS do GitHub Pages, confirme primeiro as 
 - As imagens usam carregamento adiado onde apropriado e tamanhos ajustados para reduzir dados carregados.
 - O menu pode ser usado pelo teclado; `Esc` fecha o menu móvel e devolve o foco ao botão.
 - Os estilos incluem foco visível e respeitam a preferência de redução de movimento do dispositivo.
-- No celular, o catálogo prioriza leitura rápida: cartões compactos, imagens proporcionais exibidas por inteiro, descrições e preços legíveis, filtros roláveis e botões fáceis de tocar.
+- O catálogo prioriza leitura rápida em computadores e celulares: cartões compactos, fotos exibidas por inteiro ao lado das informações, descrições e preços legíveis, filtros roláveis e botões fáceis de tocar.
 - Arquivos principais: `index.html`, `style.css` e `script.js`.
 
 ## App instalável e acesso offline

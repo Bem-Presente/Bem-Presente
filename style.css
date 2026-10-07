@@ -2293,3 +2293,36 @@ nav a:not(.nav-cta):focus-visible::after {
     padding: 12px 10px;
   }
 }
+
+@media (min-width: 721px) {
+  .products-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+  }
+
+  .product-card {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .product-card img {
+    flex: 0 0 40%;
+    width: 40%;
+    height: auto;
+    min-height: 210px;
+    max-height: 250px;
+    align-self: center;
+    aspect-ratio: auto;
+    object-fit: contain;
+    background: var(--bg-soft);
+  }
+
+  .product-body {
+    min-width: 0;
+    padding: 20px 18px;
+  }
+
+  .product-body h3 {
+    font-size: clamp(19px, 1.65vw, 24px);
+  }
+}
