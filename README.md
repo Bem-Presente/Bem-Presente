@@ -17,7 +17,17 @@ Site estático pronto para uso e publicação gratuita.
 ## Publicação
 O projeto não usa framework nem etapa de build. Publique os arquivos da raiz como site estático:
 
-- **GitHub Pages:** em Settings → Pages, escolha `Deploy from a branch`, a branch `Bem-Presente` e a pasta raiz (`/`). Para usar `lojabempresente.com.br`, cadastre o domínio em **Custom domain** e configure os registros DNS no provedor do domínio.
+- **GitHub Pages:** em Settings → Pages, escolha `Deploy from a branch`, a branch `Bem-Presente` e a pasta raiz (`/`). O domínio `lojabempresente.com.br` está definido no arquivo `CNAME`. No Registro.br, mantenha os servidores DNS atuais e adicione estes registros à zona:
+
+  | Tipo | Nome | Valor |
+  |---|---|---|
+  | A | `@` | `185.199.108.153` |
+  | A | `@` | `185.199.109.153` |
+  | A | `@` | `185.199.110.153` |
+  | A | `@` | `185.199.111.153` |
+  | CNAME | `www` | `bem-presente.github.io` |
+
+  Não remova registros de e-mail. Após a propagação do DNS, confirme o domínio em Settings → Pages e habilite HTTPS quando estiver disponível.
 - **Netlify:** conecte o repositório, deixe o comando de build vazio e use `.` como diretório de publicação.
 - **Cloudflare Pages:** escolha framework `None`, deixe o comando de build vazio e use `.` como diretório de saída.
 
