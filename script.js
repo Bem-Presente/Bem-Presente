@@ -22,6 +22,60 @@ if (menuButton && menu) {
 }
 
 const productLinks = document.querySelectorAll(".product-card .buy");
+const productCards = document.querySelectorAll(".product-card");
+const catalogFilters = document.querySelectorAll(".catalog-filter");
+const productSearch = document.getElementById("product-search");
+const catalogResults = document.getElementById("catalog-results");
+const catalogEmpty = document.getElementById("catalog-empty");
+
+if (
+  productCards.length > 0 &&
+  catalogFilters.length > 0 &&
+  productSearch instanceof HTMLInputElement &&
+  catalogResults instanceof HTMLElement &&
+  catalogEmpty instanceof HTMLElement
+) {
+  let activeCategory = "todos";
+
+  const normalize = (value) =>
+    value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLocaleLowerCase("pt-BR");
+
+  const filterCatalog = () => {
+    const searchTerm = normalize(productSearch.value.trim());
+    let visibleCount = 0;
+
+    for (const card of productCards) {
+      const matchesCategory =
+        activeCategory === "todos" || card.dataset.category === activeCategory;
+      const matchesSearch = normalize(card.textContent ?? "").includes(searchTerm);
+      const isVisible = matchesCategory && matchesSearch;
+
+      card.hidden = !isVisible;
+      visibleCount += Number(isVisible);
+    }
+
+    catalogResults.textContent = `${visibleCount} ${visibleCount === 1 ? "ideia de presente" : "ideias de presente"}`;
+    catalogEmpty.hidden = visibleCount > 0;
+  };
+
+  for (const filter of catalogFilters) {
+    filter.addEventListener("click", () => {
+      activeCategory = filter.dataset.filter ?? "todos";
+
+      for (const button of catalogFilters) {
+        const isActive = button === filter;
+        button.classList.toggle("is-active", isActive);
+        button.setAttribute("aria-pressed", String(isActive));
+      }
+
+      filterCatalog();
+    });
+  }
+
+  productSearch.addEventListener("input", filterCatalog);
+  filterCatalog();
+}
+
 const orderPanel = document.getElementById("order-panel");
 const orderItems = document.getElementById("order-items");
 const orderCount = document.getElementById("order-count");

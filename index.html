@@ -3,21 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Bem Presente: presentes de Natal 2026 para surpreender a família, as crianças e quem você ama.">
+  <meta name="description" content="Encontre presentes para toda a família na Bem Presente: ideias para casa, crianças, amigos e anfitriões. Monte seu pedido pelo WhatsApp.">
   <title>Bem Presente | Presentes de Natal 2026</title>
   <meta name="theme-color" content="#06120E">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_BR">
   <meta property="og:site_name" content="Bem Presente">
   <meta property="og:title" content="Bem Presente | Presentes de Natal 2026">
-  <meta property="og:description" content="Uma curadoria de presentes de Natal para surpreender em todas as idades e faixas de preço.">
+  <meta property="og:description" content="Ideias de presentes para casa, crianças, amigos e anfitriões. Monte seu pedido pelo WhatsApp.">
   <meta property="og:image" content="https://images.unsplash.com/photo-1513885535751-8b9238bd345a?auto=format&amp;fit=crop&amp;w=1200&amp;q=85">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Bem Presente | Presentes de Natal 2026">
-  <meta name="twitter:description" content="Uma curadoria de presentes de Natal para surpreender em todas as idades e faixas de preço.">
+  <meta name="twitter:description" content="Ideias de presentes para casa, crianças, amigos e anfitriões. Monte seu pedido pelo WhatsApp.">
   <meta name="twitter:image" content="https://images.unsplash.com/photo-1513885535751-8b9238bd345a?auto=format&amp;fit=crop&amp;w=1200&amp;q=85">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <link rel="stylesheet" href="style.css?v=20261007-pedidos">
+  <link rel="stylesheet" href="style.css?v=20261007-catalogo">
 </head>
 <body>
 <a class="skip-link" href="#conteudo-principal">Pular para o conteúdo</a>
@@ -117,11 +117,28 @@
         <p class="eyebrow">NATAL 2026</p>
         <h2>Presentes para cada pessoa da sua lista</h2>
       </div>
-      <p>Uma curadoria para amigo secreto, família, crianças e anfitriões. Faixas indicativas; consulte disponibilidade, preço e entrega pelo WhatsApp.</p>
+      <p>Explore ideias para diferentes pessoas e momentos. Produtos, imagens e faixas de preço são sugestões ilustrativas, não confirmação de estoque; consulte modelo, composição, preço e entrega pelo WhatsApp.</p>
     </div>
 
-    <div class="products-grid">
-      <article class="product-card">
+    <div class="catalog-tools">
+      <label class="catalog-search" for="product-search">
+        Buscar no catálogo
+        <input id="product-search" type="search" placeholder="Ex.: café, decoração, crianças" aria-controls="products-grid">
+      </label>
+      <div class="catalog-filters" role="group" aria-label="Filtrar produtos por categoria">
+        <button class="catalog-filter is-active" type="button" data-filter="todos" aria-pressed="true">Todos</button>
+        <button class="catalog-filter" type="button" data-filter="amigo-secreto" aria-pressed="false">Amigo secreto</button>
+        <button class="catalog-filter" type="button" data-filter="para-ela" aria-pressed="false">Para ela</button>
+        <button class="catalog-filter" type="button" data-filter="para-ele" aria-pressed="false">Para ele</button>
+        <button class="catalog-filter" type="button" data-filter="criancas" aria-pressed="false">Crianças</button>
+        <button class="catalog-filter" type="button" data-filter="casa" aria-pressed="false">Casa</button>
+        <button class="catalog-filter" type="button" data-filter="gourmet" aria-pressed="false">Gourmet</button>
+      </div>
+      <p class="catalog-results" id="catalog-results" aria-live="polite">14 ideias de presente</p>
+    </div>
+
+    <div class="products-grid" id="products-grid">
+      <article class="product-card" data-category="amigo-secreto">
         <img src="https://images.unsplash.com/photo-1608085021802-e886468f5fc1?auto=format&amp;fit=crop&amp;w=1000&amp;q=85" alt="Vela aromática acesa junto de uma manta e ramos vermelhos" loading="lazy" decoding="async">
         <div class="product-body">
           <span class="tag">Amigo secreto</span>
@@ -135,7 +152,7 @@
         </div>
       </article>
 
-      <article class="product-card">
+      <article class="product-card" data-category="para-ela">
         <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&amp;fit=crop&amp;w=1000&amp;q=85" alt="Café servido em xícaras ao lado de plantas para um momento de aconchego" loading="lazy" decoding="async">
         <div class="product-body">
           <span class="tag">Para a mãe</span>
@@ -149,7 +166,7 @@
         </div>
       </article>
 
-      <article class="product-card">
+      <article class="product-card" data-category="criancas">
         <img src="https://images.unsplash.com/photo-1594787318286-3d835c1d207f?auto=format&amp;fit=crop&amp;w=1000&amp;q=85" alt="Trem de brinquedo de madeira em uma pequena estação de inverno" loading="lazy" decoding="async">
         <div class="product-body">
           <span class="tag">Para as crianças</span>
@@ -163,7 +180,7 @@
         </div>
       </article>
 
-      <article class="product-card">
+      <article class="product-card" data-category="casa">
         <img src="https://images.unsplash.com/photo-1482517967863-00e15c9b44be?auto=format&amp;fit=crop&amp;w=1000&amp;q=85" alt="Enfeite dourado pendurado em uma árvore de Natal iluminada" loading="lazy" decoding="async">
         <div class="product-body">
           <span class="tag">Para a casa</span>
@@ -177,7 +194,7 @@
         </div>
       </article>
 
-      <article class="product-card">
+      <article class="product-card" data-category="amigo-secreto">
         <img src="https://images.unsplash.com/photo-1513201099705-a9746e1e201f?auto=format&amp;fit=crop&amp;w=1000&amp;q=85" alt="Caixa de presente embrulhada com laço vermelho" loading="lazy" decoding="async">
         <div class="product-body">
           <span class="tag">Amigo secreto</span>
@@ -191,7 +208,7 @@
         </div>
       </article>
 
-      <article class="product-card">
+      <article class="product-card" data-category="gourmet">
         <img src="https://images.unsplash.com/photo-1513885535751-8b9238bd345a?auto=format&amp;fit=crop&amp;w=1000&amp;q=85" alt="Presentes de Natal embrulhados com fitas e detalhes vermelhos" loading="lazy" decoding="async">
         <div class="product-body">
           <span class="tag">Família e anfitriões</span>
@@ -204,7 +221,120 @@
           <a class="buy" href="https://wa.me/559291117526?text=Quero%20consultar%20o%20Kit%20de%20Natal%20para%20Anfitri%C3%B5es." target="_blank" rel="noopener noreferrer">Adicionar ao pedido</a>
         </div>
       </article>
+
+      <article class="product-card" data-category="para-ela">
+        <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&amp;fit=crop&amp;w=1000&amp;q=85" alt="Composição relaxante para um momento de autocuidado" loading="lazy" decoding="async">
+        <div class="product-body">
+          <span class="tag">Para ela</span>
+          <h3>Kit Pausa &amp; Autocuidado</h3>
+          <p>Uma ideia de presente com itens de banho e aromas para criar um momento tranquilo.</p>
+          <div class="price-row">
+            <div class="price">Até R$ 150</div>
+            <span class="small-meta">Um tempo para si</span>
+          </div>
+          <a class="buy" href="https://wa.me/559291117526?text=Quero%20consultar%20o%20Kit%20Pausa%20e%20Autocuidado." target="_blank" rel="noopener noreferrer">Adicionar ao pedido</a>
+        </div>
+      </article>
+
+      <article class="product-card" data-category="para-ele">
+        <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&amp;fit=crop&amp;w=1000&amp;q=85" alt="Churrasco preparado para compartilhar à mesa" loading="lazy" decoding="async">
+        <div class="product-body">
+          <span class="tag">Para ele</span>
+          <h3>Kit Churrasco &amp; Companhia</h3>
+          <p>Uma sugestão para quem gosta de reunir amigos e preparar bons momentos à mesa.</p>
+          <div class="price-row">
+            <div class="price">Até R$ 200</div>
+            <span class="small-meta">Para compartilhar</span>
+          </div>
+          <a class="buy" href="https://wa.me/559291117526?text=Quero%20consultar%20o%20Kit%20Churrasco%20e%20Companhia." target="_blank" rel="noopener noreferrer">Adicionar ao pedido</a>
+        </div>
+      </article>
+
+      <article class="product-card" data-category="amigo-secreto">
+        <img src="https://images.unsplash.com/photo-1517842645767-c639042777db?auto=format&amp;fit=crop&amp;w=1000&amp;q=85" alt="Caderno aberto preparado para anotações e ideias" loading="lazy" decoding="async">
+        <div class="product-body">
+          <span class="tag">Amigo secreto</span>
+          <h3>Caderno de Novas Ideias</h3>
+          <p>Um presente útil para registrar planos, listas, desenhos e inspirações do dia a dia.</p>
+          <div class="price-row">
+            <div class="price">Até R$ 80</div>
+            <span class="small-meta">Criatividade diária</span>
+          </div>
+          <a class="buy" href="https://wa.me/559291117526?text=Quero%20consultar%20o%20Caderno%20de%20Novas%20Ideias." target="_blank" rel="noopener noreferrer">Adicionar ao pedido</a>
+        </div>
+      </article>
+
+      <article class="product-card" data-category="criancas">
+        <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&amp;fit=crop&amp;w=1000&amp;q=85" alt="Materiais coloridos para atividades de pintura e desenho" loading="lazy" decoding="async">
+        <div class="product-body">
+          <span class="tag">Para as crianças</span>
+          <h3>Kit Pequeno Artista</h3>
+          <p>Materiais de desenho e pintura para inventar, experimentar cores e criar em família.</p>
+          <div class="price-row">
+            <div class="price">Até R$ 100</div>
+            <span class="small-meta">Imaginação sem tela</span>
+          </div>
+          <a class="buy" href="https://wa.me/559291117526?text=Quero%20consultar%20o%20Kit%20Pequeno%20Artista." target="_blank" rel="noopener noreferrer">Adicionar ao pedido</a>
+        </div>
+      </article>
+
+      <article class="product-card" data-category="gourmet">
+        <img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&amp;fit=crop&amp;w=1000&amp;q=85" alt="Chá servido em uma xícara em um momento de pausa" loading="lazy" decoding="async">
+        <div class="product-body">
+          <span class="tag">Gourmet</span>
+          <h3>Kit Chá &amp; Conversa</h3>
+          <p>Uma seleção de chás e acompanhamentos para transformar uma visita em um encontro especial.</p>
+          <div class="price-row">
+            <div class="price">Até R$ 120</div>
+            <span class="small-meta">Para bons encontros</span>
+          </div>
+          <a class="buy" href="https://wa.me/559291117526?text=Quero%20consultar%20o%20Kit%20Cha%20e%20Conversa." target="_blank" rel="noopener noreferrer">Adicionar ao pedido</a>
+        </div>
+      </article>
+
+      <article class="product-card" data-category="casa">
+        <img src="https://images.unsplash.com/photo-1490312278390-ab64016e0aa9?auto=format&amp;fit=crop&amp;w=1000&amp;q=85" alt="Ambiente acolhedor com detalhes de decoração para a casa" loading="lazy" decoding="async">
+        <div class="product-body">
+          <span class="tag">Para a casa</span>
+          <h3>Difusor de Aromas para Casa</h3>
+          <p>Uma sugestão delicada para perfumar a sala, o quarto ou o cantinho de descanso.</p>
+          <div class="price-row">
+            <div class="price">Até R$ 100</div>
+            <span class="small-meta">Casa acolhedora</span>
+          </div>
+          <a class="buy" href="https://wa.me/559291117526?text=Quero%20consultar%20o%20Difusor%20de%20Aromas%20para%20Casa." target="_blank" rel="noopener noreferrer">Adicionar ao pedido</a>
+        </div>
+      </article>
+
+      <article class="product-card" data-category="casa">
+        <img src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&amp;fit=crop&amp;w=1000&amp;q=85" alt="Sala decorada com objetos e plantas em tons naturais" loading="lazy" decoding="async">
+        <div class="product-body">
+          <span class="tag">Para a casa</span>
+          <h3>Vasinho Decorativo Natural</h3>
+          <p>Um detalhe versátil para dar vida à estante, à mesa de trabalho ou ao aparador.</p>
+          <div class="price-row">
+            <div class="price">Até R$ 100</div>
+            <span class="small-meta">Detalhe com charme</span>
+          </div>
+          <a class="buy" href="https://wa.me/559291117526?text=Quero%20consultar%20o%20Vasinho%20Decorativo%20Natural." target="_blank" rel="noopener noreferrer">Adicionar ao pedido</a>
+        </div>
+      </article>
+
+      <article class="product-card" data-category="gourmet">
+        <img src="https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&amp;fit=crop&amp;w=1000&amp;q=85" alt="Caixa presenteável preparada para uma ocasião especial" loading="lazy" decoding="async">
+        <div class="product-body">
+          <span class="tag">Gourmet</span>
+          <h3>Caixa de Doces para Compartilhar</h3>
+          <p>Uma lembrança saborosa para levar a um encontro, agradecer ou celebrar em família.</p>
+          <div class="price-row">
+            <div class="price">Até R$ 150</div>
+            <span class="small-meta">Feita para dividir</span>
+          </div>
+          <a class="buy" href="https://wa.me/559291117526?text=Quero%20consultar%20a%20Caixa%20de%20Doces%20para%20Compartilhar." target="_blank" rel="noopener noreferrer">Adicionar ao pedido</a>
+        </div>
+      </article>
     </div>
+    <p class="catalog-empty" id="catalog-empty" hidden>Nenhuma sugestão encontrada. Experimente outra busca ou categoria.</p>
 
     <section class="order-panel" id="order-panel" aria-labelledby="order-title" hidden>
       <div class="order-header">
@@ -312,6 +442,6 @@
   </div>
   <div class="copyright">© 2026 Bem Presente. Todos os direitos reservados.</div>
 </footer>
-<script src="script.js?v=20261007-pedidos"></script>
+<script src="script.js?v=20261007-catalogo"></script>
 </body>
 </html>

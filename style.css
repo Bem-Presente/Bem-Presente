@@ -348,14 +348,23 @@ nav a {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 28px;
+  align-items: stretch;
 }
 
 .product-card {
+  display: flex;
+  flex-direction: column;
   background: #fff;
   border: 1px solid #f0e6dd;
   border-radius: 24px;
   overflow: hidden;
   box-shadow: 0 18px 40px rgba(45, 36, 28, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 22px 44px rgba(0, 0, 0, 0.14);
 }
 
 .product-card img {
@@ -365,6 +374,9 @@ nav a {
 }
 
 .product-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
   padding: 22px 20px 24px;
 }
 
@@ -396,7 +408,75 @@ nav a {
   justify-content: space-between;
   align-items: center;
   gap: 12px;
-  margin: 18px 0 18px;
+  margin: auto 0 18px;
+  padding-top: 18px;
+}
+
+.catalog-tools {
+  display: grid;
+  gap: 16px;
+  margin: -8px 0 28px;
+}
+
+.catalog-search {
+  display: grid;
+  gap: 8px;
+  max-width: 520px;
+  color: var(--ink);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.catalog-search input {
+  width: 100%;
+  min-height: 48px;
+  padding: 12px 16px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--panel);
+  color: var(--ink);
+  font: inherit;
+}
+
+.catalog-search input::placeholder {
+  color: var(--ink-soft);
+  opacity: 0.8;
+}
+
+.catalog-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+.catalog-filter {
+  padding: 9px 15px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--panel);
+  color: var(--ink);
+  font: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.catalog-filter:hover,
+.catalog-filter.is-active {
+  border-color: var(--gold);
+  background: var(--gold);
+  color: var(--bg);
+}
+
+.catalog-results,
+.catalog-empty {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 14px;
+}
+
+.catalog-empty {
+  padding: 24px 0;
 }
 
 .price {
@@ -792,7 +872,10 @@ footer {
     gap: 28px;
   }
 
-  .products-grid,
+  .products-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .blog-grid {
     grid-template-columns: 1fr;
   }
@@ -868,6 +951,12 @@ footer {
 
   .send-order {
     width: 100%;
+  }
+}
+
+@media (max-width: 560px) {
+  .products-grid {
+    grid-template-columns: 1fr;
   }
 }
 
