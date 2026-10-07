@@ -529,8 +529,9 @@ nav a {
 
 .product-card img {
   width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
+  aspect-ratio: 16 / 10;
+  object-fit: contain;
+  background: var(--bg-soft);
 }
 
 .product-card,
@@ -2204,6 +2205,65 @@ nav a:not(.nav-cta):focus-visible::after {
   .collection-cta {
     font-size: 14px;
   }
+
+  .product-card {
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .product-card img {
+    flex: 0 0 36%;
+    width: 36%;
+    height: auto;
+    min-height: 156px;
+    max-height: 210px;
+    align-self: stretch;
+    aspect-ratio: auto;
+    object-fit: contain;
+    background: var(--bg-soft);
+  }
+
+  .product-body {
+    min-width: 0;
+    padding: 14px 13px;
+  }
+
+  .tag {
+    padding: 6px 9px;
+    font-size: 10px;
+  }
+
+  .product-body h3 {
+    margin: 10px 0 7px;
+    font-size: 18px;
+    line-height: 1.25;
+  }
+
+  .product-body p {
+    font-size: 13px;
+    line-height: 1.45;
+  }
+
+  .price-row {
+    gap: 7px;
+    padding-top: 11px;
+    margin-bottom: 11px;
+  }
+
+  .price {
+    font-size: 20px;
+  }
+
+  .small-meta {
+    padding: 5px 8px;
+    font-size: 11px;
+  }
+
+  .product-card .buy {
+    min-height: 44px;
+    padding: 10px 8px;
+    font-size: 13px;
+  }
 }
 
 @media (max-width: 380px) {
@@ -2216,10 +2276,20 @@ nav a:not(.nav-cta):focus-visible::after {
   }
 
   .product-body h3 {
-    font-size: 22px;
+    font-size: 17px;
   }
 
   .price-row {
     flex-direction: column;
+  }
+
+  .product-card img {
+    flex-basis: 34%;
+    width: 34%;
+    min-height: 148px;
+  }
+
+  .product-body {
+    padding: 12px 10px;
   }
 }
