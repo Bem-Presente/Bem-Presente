@@ -12,7 +12,7 @@ Site estático pronto para uso e publicação gratuita.
 - Troque os produtos, preços e textos no arquivo `index.html`.
 - Ajuste o número do WhatsApp nos links `wa.me`.
 - Na loja, o cliente pode montar um pedido com vários produtos e quantidades e enviá-lo pelo WhatsApp; disponibilidade, preço final e entrega são confirmados no atendimento.
-- O catálogo tem busca e filtros por categoria. Os 14 itens e imagens são sugestões ilustrativas; confirme os produtos reais e os preços antes de divulgar a oferta.
+- O catálogo tem busca e filtros por categoria. As 30 ideias, imagens e faixas de preço são ilustrativas; confirme os produtos reais e os preços antes de divulgar a oferta.
 - O layout se adapta a celulares, tablets e computadores, incluindo navegação, catálogo e artigos.
 - Edite os artigos do blog em `artigo-*.html`.
 - Configure a identidade visual em `style.css`.

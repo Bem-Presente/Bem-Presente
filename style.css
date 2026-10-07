@@ -154,6 +154,40 @@ nav a {
   background: linear-gradient(135deg, #fffaf2 0%, #f6eee3 100%);
 }
 
+.christmas-banner {
+  padding: clamp(40px, 6vw, 76px) 0;
+  background:
+    linear-gradient(90deg, hsl(158 42% 5% / 0.94), hsl(158 42% 5% / 0.64)),
+    url("https://images.unsplash.com/photo-1513885535751-8b9238bd345a?auto=format&fit=crop&w=1800&q=85") center 48% / cover no-repeat;
+  border-bottom: 1px solid var(--line);
+}
+
+.christmas-banner-content {
+  max-width: 780px;
+  text-align: center;
+}
+
+.christmas-banner h2 {
+  margin: 0;
+  color: var(--ink);
+  font: 700 clamp(34px, 5vw, 58px)/1.08 Georgia, serif;
+}
+
+.christmas-banner-content > p:not(.eyebrow) {
+  max-width: 620px;
+  margin: 16px auto 24px;
+  color: var(--ink-soft);
+  font-size: clamp(16px, 2vw, 19px);
+}
+
+.christmas-banner-cta {
+  display: inline-grid;
+  min-height: 48px;
+  place-items: center;
+  background: linear-gradient(135deg, var(--gold), var(--gold-deep));
+  color: var(--bg);
+}
+
 .hero-grid {
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
@@ -961,6 +995,11 @@ footer {
     padding: 52px 0 40px;
   }
 
+  .christmas-banner {
+    padding: 40px 0;
+    background-position: 58% center;
+  }
+
   .hero-grid {
     gap: 24px;
   }
@@ -1082,6 +1121,23 @@ footer {
 
   .hero-text {
     font-size: 16px;
+  }
+
+  .christmas-banner {
+    padding: 34px 0;
+  }
+
+  .christmas-banner h2 {
+    font-size: clamp(32px, 10vw, 42px);
+  }
+
+  .christmas-banner-content > p:not(.eyebrow) {
+    margin: 12px auto 20px;
+  }
+
+  .christmas-banner-cta {
+    width: 100%;
+    text-align: center;
   }
 
   .hero-media {
