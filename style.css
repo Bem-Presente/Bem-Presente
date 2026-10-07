@@ -163,8 +163,17 @@ nav a {
 }
 
 .christmas-banner-content {
+  --tilt-x: 0deg;
+  --tilt-y: 0deg;
   max-width: 780px;
   text-align: center;
+  transition: transform 220ms ease;
+  transform-style: preserve-3d;
+  transform: perspective(1200px) rotateX(var(--tilt-x)) rotateY(var(--tilt-y));
+}
+
+.christmas-banner-content > * {
+  transform: translateZ(28px);
 }
 
 .christmas-banner h2 {
@@ -287,8 +296,18 @@ nav a {
 }
 
 .hero-media {
+  --tilt-x: 0deg;
+  --tilt-y: 0deg;
   position: relative;
   height: clamp(420px, 43vw, 520px);
+  transform-style: preserve-3d;
+  transform: perspective(1200px) rotateX(var(--tilt-x)) rotateY(var(--tilt-y));
+  transition: transform 220ms ease;
+}
+
+.hero-media img {
+  transform: translateZ(22px);
+  transition: transform 220ms ease;
 }
 
 .hero-media img {
@@ -309,6 +328,7 @@ nav a {
   padding: 18px 20px;
   border-radius: 18px;
   backdrop-filter: blur(8px);
+  transform: translateZ(54px);
 }
 
 .media-card strong {
@@ -391,6 +411,104 @@ nav a {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: clamp(16px, 2.5vw, 28px);
   align-items: stretch;
+}
+
+.collection-section {
+  overflow: hidden;
+}
+
+.collection-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(14px, 2vw, 22px);
+  perspective: 1200px;
+}
+
+.collection-card {
+  --tilt-x: 0deg;
+  --tilt-y: 0deg;
+  --lift: 0px;
+  position: relative;
+  display: block;
+  min-width: 0;
+  height: clamp(245px, 25vw, 320px);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 24px;
+  isolation: isolate;
+  background: var(--panel-strong);
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.18);
+  transform: perspective(1000px) rotateX(var(--tilt-x)) rotateY(var(--tilt-y)) translateY(var(--lift));
+  transform-style: preserve-3d;
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+.collection-card:hover {
+  --lift: -6px;
+  box-shadow: 0 24px 44px rgba(0, 0, 0, 0.24);
+}
+
+.collection-card img,
+.collection-shade {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.collection-card img {
+  object-fit: cover;
+  transform: translateZ(18px) scale(1.04);
+  transition: transform 350ms ease;
+}
+
+.collection-card:hover img {
+  transform: translateZ(28px) scale(1.1);
+}
+
+.collection-shade {
+  z-index: 1;
+  background: linear-gradient(180deg, rgba(10, 16, 13, 0.04) 15%, rgba(10, 16, 13, 0.8) 100%);
+}
+
+.collection-copy {
+  position: absolute;
+  z-index: 2;
+  inset: auto 20px 20px;
+  display: grid;
+  gap: 7px;
+  color: #fff;
+  transform: translateZ(42px);
+}
+
+.collection-kicker {
+  color: #f8ddb5;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.collection-title {
+  font: 700 clamp(20px, 2vw, 25px)/1.1 Georgia, serif;
+}
+
+.collection-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 3px;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.collection-cta span {
+  color: var(--gold-deep);
+  transition: transform 180ms ease;
+}
+
+.collection-card:hover .collection-cta span {
+  transform: translate(3px, -3px);
 }
 
 .product-card {
@@ -558,6 +676,8 @@ nav a {
 }
 
 .banner-inner {
+  --tilt-x: 0deg;
+  --tilt-y: 0deg;
   position: relative;
   background: linear-gradient(90deg, rgba(26, 20, 17, 0.82), rgba(26, 20, 17, 0.5)),
     url('https://images.unsplash.com/photo-1513885535751-8b9238bd345a?auto=format&fit=crop&w=1600&q=85') center/cover no-repeat;
@@ -568,6 +688,13 @@ nav a {
   align-items: center;
   gap: 24px;
   box-shadow: 0 18px 42px rgba(47, 36, 28, 0.12);
+  transform: perspective(1200px) rotateX(var(--tilt-x)) rotateY(var(--tilt-y));
+  transform-style: preserve-3d;
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+.banner-inner > * {
+  transform: translateZ(28px);
 }
 
 .value-section {
@@ -1008,6 +1135,10 @@ footer {
     height: clamp(280px, 74vw, 420px);
   }
 
+  .collection-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .about h2,
   .section-head h2,
   .banner h2 {
@@ -1144,6 +1275,24 @@ footer {
     height: clamp(260px, 82vw, 360px);
   }
 
+  .collection-card {
+    height: 220px;
+    border-radius: 20px;
+  }
+
+  .collection-copy {
+    inset-inline: 14px;
+    bottom: 14px;
+  }
+
+  .collection-kicker {
+    font-size: 9px;
+  }
+
+  .collection-title {
+    font-size: 20px;
+  }
+
   .media-card {
     left: 14px;
     right: 14px;
@@ -1164,6 +1313,10 @@ footer {
 
   .products-grid {
     grid-template-columns: 1fr;
+  }
+
+  .collection-grid {
+    gap: 12px;
   }
 
   .blog-grid,
@@ -1401,6 +1554,19 @@ nav a,
   box-shadow: 0 18px 42px rgba(0, 0, 0, 0.12);
 }
 
+.collection-card {
+  border-color: var(--line);
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.26);
+}
+
+@media (hover: none) {
+  .collection-card:active {
+    --tilt-x: 2deg;
+    --tilt-y: -2deg;
+    --lift: -2px;
+  }
+}
+
 footer {
   background: var(--bg);
   color: var(--ink);
@@ -1436,5 +1602,18 @@ a:hover {
   *::before,
   *::after {
     transition-duration: 0.01ms !important;
+  }
+
+  .collection-card,
+  .collection-card img,
+  .collection-copy,
+  .hero-media,
+  .hero-media img,
+  .media-card,
+  .christmas-banner-content,
+  .christmas-banner-content > *,
+  .banner-inner > *,
+  .banner-inner {
+    transform: none !important;
   }
 }

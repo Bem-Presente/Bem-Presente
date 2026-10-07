@@ -24,6 +24,7 @@ if (menuButton && menu) {
 const productLinks = document.querySelectorAll(".product-card .buy");
 const productCards = document.querySelectorAll(".product-card");
 const catalogFilters = document.querySelectorAll(".catalog-filter");
+const collectionLinks = document.querySelectorAll("[data-collection-filter]");
 const productSearch = document.getElementById("product-search");
 const catalogResults = document.getElementById("catalog-results");
 const catalogEmpty = document.getElementById("catalog-empty");
@@ -72,8 +73,63 @@ if (
     });
   }
 
+  for (const link of collectionLinks) {
+    link.addEventListener("click", () => {
+      const category = link.dataset.collectionFilter;
+
+      if (!catalogFilters.length || !category) {
+        return;
+      }
+
+      const matchingFilter = Array.from(catalogFilters).find(
+        (filter) => filter.dataset.filter === category
+      );
+
+      if (!matchingFilter) {
+        return;
+      }
+
+      productSearch.value = "";
+      activeCategory = category;
+
+      for (const filter of catalogFilters) {
+        const isActive = filter === matchingFilter;
+        filter.classList.toggle("is-active", isActive);
+        filter.setAttribute("aria-pressed", String(isActive));
+      }
+
+      filterCatalog();
+    });
+  }
+
   productSearch.addEventListener("input", filterCatalog);
   filterCatalog();
+}
+
+const tiltElements = document.querySelectorAll("[data-tilt]");
+const supportsHoverTilt = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+if (supportsHoverTilt && !prefersReducedMotion) {
+  for (const element of tiltElements) {
+    element.addEventListener("pointermove", (event) => {
+      if (event.pointerType !== "mouse") {
+        return;
+      }
+
+      const bounds = element.getBoundingClientRect();
+      const horizontal = (event.clientX - bounds.left) / bounds.width - 0.5;
+      const vertical = (event.clientY - bounds.top) / bounds.height - 0.5;
+
+      element.style.setProperty("--tilt-x", `${vertical * -7}deg`);
+      element.style.setProperty("--tilt-y", `${horizontal * 7}deg`);
+    });
+
+    element.addEventListener("pointerleave", () => {
+      element.style.setProperty("--tilt-x", "0deg");
+      element.style.setProperty("--tilt-y", "0deg");
+    });
+  }
 }
 
 const orderPanel = document.getElementById("order-panel");
