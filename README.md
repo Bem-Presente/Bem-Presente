@@ -16,7 +16,7 @@ Site estático pronto para uso e publicação gratuita.
 - Os vídeos promocionais e seus botões de download ficam em `baixar-video.html`. Mantenha as capas e os arquivos MP4 na raiz para os downloads funcionarem.
 - O SEO básico informa a marca `Bem Presente`, inclui URLs canônicas nas páginas principais e lista as páginas públicas em `sitemap.xml`, referenciado por `robots.txt`. Para pedir a indexação ao Google, adicione o domínio `lojabempresente.com.br` no Google Search Console, conclua a verificação de propriedade, envie `https://lojabempresente.com.br/sitemap.xml` e solicite a indexação da página inicial. A indexação e a posição nos resultados dependem do Google e não são imediatas nem garantidas.
 - O layout se adapta a celulares, tablets e computadores, incluindo navegação, catálogo e artigos.
-- As imagens do catálogo usam tamanhos ajustados para telas comuns e carregamento adiado; controles de teclado exibem foco visível, e o menu móvel pode ser fechado com Escape.
+- As imagens do catálogo usam tamanhos ajustados para telas comuns e carregamento adiado; as coleções viram cartões horizontais em celulares. Controles de teclado exibem foco visível, e o menu móvel pode ser fechado com Escape.
 - Os vídeos promocionais são disponibilizados em MP4 vertical 720 × 1280 para facilitar o download e o envio às redes sociais.
 - Edite os artigos do blog em `artigo-*.html`.
 - Configure a identidade visual em `style.css`.
