@@ -13,11 +13,11 @@ Site estático pronto para uso e publicação gratuita.
 - Ajuste o número do WhatsApp nos links `wa.me`.
 - Na loja, o cliente pode montar um pedido com vários produtos e quantidades e enviá-lo pelo WhatsApp; disponibilidade, preço final e entrega são confirmados no atendimento.
 - O catálogo tem busca e filtros por categoria. As 30 ideias, imagens e faixas de preço são ilustrativas; confirme os produtos reais e os preços antes de divulgar a oferta.
-- Os vídeos promocionais e seus botões de download ficam em `baixar-video.html`. Mantenha as capas e os arquivos MP4 na raiz para os downloads funcionarem.
 - O SEO básico informa a marca `Bem Presente`, inclui URLs canônicas nas páginas principais e lista as páginas públicas em `sitemap.xml`, referenciado por `robots.txt`. Para pedir a indexação ao Google, adicione o domínio `lojabempresente.com.br` no Google Search Console, conclua a verificação de propriedade, envie `https://lojabempresente.com.br/sitemap.xml` e solicite a indexação da página inicial. A indexação e a posição nos resultados dependem do Google e não são imediatas nem garantidas.
 - O layout se adapta a celulares, tablets e computadores, incluindo navegação, catálogo e artigos.
 - As imagens do catálogo usam tamanhos ajustados para telas comuns e carregamento adiado; as coleções viram cartões horizontais em celulares. Controles de teclado exibem foco visível, e o menu móvel pode ser fechado com Escape.
-- Os vídeos promocionais são disponibilizados em MP4 vertical 720 × 1280 para facilitar o download e o envio às redes sociais.
+- As páginas usam uma Content Security Policy (CSP) para limitar scripts, imagens e conexões, além de política de referência restrita. O site é estático e não processa pagamentos nem armazena pedidos; o carrinho só monta uma mensagem para o WhatsApp.
+- No GitHub Pages, cabeçalhos HTTP como `Strict-Transport-Security`, `X-Content-Type-Options`, `Permissions-Policy` e `frame-ancestors` não podem ser configurados por este repositório. Para controle desses cabeçalhos, use um proxy/CDN compatível ou uma hospedagem que permita configurá-los. Nenhum site pode ser considerado totalmente invulnerável.
 - Edite os artigos do blog em `artigo-*.html`.
 - Configure a identidade visual em `style.css`.
 

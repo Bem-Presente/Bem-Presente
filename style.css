@@ -1621,6 +1621,128 @@ a:hover {
   color: var(--gold);
 }
 
+html {
+  color-scheme: dark;
+}
+
+.header {
+  background: rgba(6, 18, 14, 0.88);
+  backdrop-filter: blur(18px) saturate(140%);
+}
+
+nav a:not(.nav-cta) {
+  position: relative;
+  transition: color 180ms ease;
+}
+
+nav a:not(.nav-cta)::after {
+  position: absolute;
+  right: 0;
+  bottom: 7px;
+  left: 0;
+  height: 1px;
+  background: var(--gold-deep);
+  content: "";
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 180ms ease;
+}
+
+nav a:not(.nav-cta):hover::after,
+nav a:not(.nav-cta):focus-visible::after {
+  transform: scaleX(1);
+}
+
+.hero h1 {
+  letter-spacing: -0.045em;
+}
+
+.hero-highlight {
+  max-width: 560px;
+  color: var(--ink);
+}
+
+.hero-media img {
+  border: 1px solid var(--line);
+}
+
+.hero-media::after {
+  position: absolute;
+  z-index: 1;
+  inset: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 22px;
+  content: "";
+  pointer-events: none;
+  transform: translateZ(34px);
+}
+
+.media-card {
+  z-index: 2;
+  border: 1px solid rgba(240, 201, 104, 0.24);
+}
+
+.section-head h2,
+.about h2,
+.article-wrap h1 {
+  letter-spacing: -0.025em;
+}
+
+.section-head h2::after {
+  display: block;
+  width: 54px;
+  height: 3px;
+  margin-top: 15px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--gold), transparent);
+  content: "";
+}
+
+.collection-card:focus-visible {
+  outline-offset: 5px;
+}
+
+.product-card,
+.blog-card {
+  border: 1px solid var(--line);
+}
+
+.product-card:focus-within,
+.blog-card:focus-within {
+  border-color: var(--gold);
+  box-shadow: 0 20px 44px rgba(0, 0, 0, 0.24);
+}
+
+.catalog-search input {
+  accent-color: var(--gold);
+  transition: border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.catalog-search input:focus-visible {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 4px rgba(240, 201, 104, 0.12);
+}
+
+.buy,
+.send-order,
+.nav-cta,
+.primary {
+  transition: transform 180ms ease, box-shadow 180ms ease, filter 180ms ease;
+}
+
+.buy:hover,
+.send-order:hover,
+.nav-cta:hover,
+.primary:hover {
+  filter: brightness(1.08);
+  transform: translateY(-2px);
+}
+
+.order-panel {
+  border-color: rgba(240, 201, 104, 0.28);
+  background: linear-gradient(145deg, var(--panel), rgba(12, 31, 24, 0.78));
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -1643,5 +1765,16 @@ a:hover {
   .banner-inner > *,
   .banner-inner {
     transform: none !important;
+  }
+}
+
+@media (max-width: 560px) {
+  .hero-media::after {
+    inset: 8px;
+    border-radius: 18px;
+  }
+
+  .section-head h2::after {
+    margin-top: 12px;
   }
 }

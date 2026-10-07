@@ -43,15 +43,7 @@ Se for necessário reconstruir a zona DNS do GitHub Pages, confirme primeiro as 
 
 ## Vídeos promocionais
 
-Página para baixar os vídeos: <https://lojabempresente.com.br/baixar-video.html>
-
-Mantenha estes três MP4 na raiz do projeto e com estes nomes, pois a página de download os referencia diretamente:
-
-- `video-anuncio-bem-presente.mp4`
-- `video-bem-presente-carinho.mp4`
-- `video-bem-presente-ideias-para-presentear.mp4`
-
-As capas correspondentes também ficam na raiz. Exporte ou substitua os vídeos mantendo as dimensões verticais 720 × 1280, o áudio e os mesmos nomes para preservar os botões de download.
+Os vídeos promocionais foram baixados pelo proprietário e não são mais hospedados pelo site. Para disponibilizar novos vídeos, adicione os arquivos e atualize a página de downloads antes de publicar.
 
 ## Como preservar e recuperar
 
@@ -59,6 +51,6 @@ As capas correspondentes também ficam na raiz. Exporte ou substitua os vídeos 
 2. Antes de alterar o domínio, DNS ou publicação, confira esta página e o [README.md](./README.md).
 3. Mantenha o repositório atualizado e guarde uma cópia dos arquivos fora do computador.
 4. Para publicar alterações, use a branch `Bem-Presente` e confirme no GitHub Pages que a compilação terminou com sucesso.
-5. Depois da publicação, teste o site, o sitemap e os links do WhatsApp e dos downloads.
+5. Depois da publicação, teste o site, o sitemap e os links do WhatsApp.
 
 > Esta documentação não guarda senhas, códigos de recuperação nem credenciais de contas. Não coloque esses dados no repositório.
