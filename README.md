@@ -17,6 +17,8 @@ Site estático pronto para uso e publicação gratuita.
 - O layout se adapta a celulares, tablets e computadores, incluindo navegação, catálogo e artigos.
 - As imagens do catálogo usam tamanhos ajustados para telas comuns e carregamento adiado; as coleções viram cartões horizontais em celulares. Controles de teclado exibem foco visível, e o menu móvel pode ser fechado com Escape.
 - As páginas usam uma Content Security Policy (CSP) para limitar scripts, imagens e conexões, além de política de referência restrita. O site é estático e não processa pagamentos nem armazena pedidos; o carrinho só monta uma mensagem para o WhatsApp.
+- A loja pode ser instalada como app web (PWA) pelo menu do navegador. Após abrir o site conectado, páginas e arquivos principais ficam disponíveis offline; fotos externas e o atendimento do WhatsApp continuam dependendo da internet.
+- Para instalar: abra `https://lojabempresente.com.br` no Chrome/Edge e escolha **Instalar aplicativo** no botão da página ou menu do navegador. No iPhone/iPad, use **Compartilhar → Adicionar à Tela de Início** no Safari. A loja não precisa ser enviada a uma loja de aplicativos para funcionar como PWA.
 - No GitHub Pages, cabeçalhos HTTP como `Strict-Transport-Security`, `X-Content-Type-Options`, `Permissions-Policy` e `frame-ancestors` não podem ser configurados por este repositório. Para controle desses cabeçalhos, use um proxy/CDN compatível ou uma hospedagem que permita configurá-los. Nenhum site pode ser considerado totalmente invulnerável.
 - Edite os artigos do blog em `artigo-*.html`.
 - Configure a identidade visual em `style.css`.
@@ -43,8 +45,9 @@ Antes de publicar, confira o número do WhatsApp, os produtos, os preços e os a
 ## Estrutura
 - `index.html` — página inicial, loja e blog
 - `style.css` — visual do site
-- `script.js` — menu mobile
+- `script.js` — menu, catálogo, pedidos pelo WhatsApp e instalação do app
 - `artigo-*.html` — artigos do blog
 - `favicon.svg` — ícone da loja
+- `manifest.webmanifest`, `sw.js`, `offline.html` e `app-icon-*.png` — instalação e modo offline do app
 - `robots.txt` — orientação para mecanismos de busca
 - `404.html` — página de endereço não encontrado

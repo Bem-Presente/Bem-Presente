@@ -28,6 +28,48 @@ if (menuButton && menu) {
   });
 }
 
+const installAppButton = document.getElementById("install-app");
+const installAppHelp = document.querySelector(".app-install details");
+let deferredInstallPrompt = null;
+
+if (installAppButton instanceof HTMLButtonElement) {
+  window.addEventListener("beforeinstallprompt", (event) => {
+    event.preventDefault();
+    deferredInstallPrompt = event;
+    installAppButton.hidden = false;
+  });
+
+  installAppButton.addEventListener("click", async () => {
+    if (!deferredInstallPrompt) {
+      installAppHelp?.setAttribute("open", "");
+      return;
+    }
+
+    const promptEvent = deferredInstallPrompt;
+    deferredInstallPrompt = null;
+    installAppButton.hidden = true;
+
+    try {
+      await promptEvent.prompt();
+      await promptEvent.userChoice;
+    } catch (error) {
+      console.error("Não foi possível abrir a instalação do app Bem Presente.", error);
+      installAppHelp?.setAttribute("open", "");
+    }
+  });
+
+  window.addEventListener("appinstalled", () => {
+    installAppButton.hidden = true;
+    deferredInstallPrompt = null;
+  });
+}
+
+if ("serviceWorker" in navigator && window.isSecureContext) {
+  navigator.serviceWorker.register("./sw.js").catch((error) => {
+    console.error("Não foi possível ativar o modo offline do app Bem Presente.", error);
+  });
+}
+
 const productLinks = document.querySelectorAll(".product-card .buy");
 const productCards = document.querySelectorAll(".product-card");
 const catalogFilters = document.querySelectorAll(".catalog-filter");

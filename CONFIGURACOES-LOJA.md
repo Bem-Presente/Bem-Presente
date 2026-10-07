@@ -41,6 +41,14 @@ Se for necessário reconstruir a zona DNS do GitHub Pages, confirme primeiro as 
 - Os estilos incluem foco visível e respeitam a preferência de redução de movimento do dispositivo.
 - Arquivos principais: `index.html`, `style.css` e `script.js`.
 
+## App instalável e acesso offline
+
+- O site pode ser instalado como PWA pelo menu do navegador; não é um app distribuído pela Play Store ou App Store.
+- Chrome/Edge: abra `https://lojabempresente.com.br` e use o botão **Instalar aplicativo** ou o comando de instalação do navegador.
+- iPhone/iPad: abra no Safari, toque em Compartilhar e escolha **Adicionar à Tela de Início**.
+- Depois de abrir o site conectado, a página inicial e páginas visitadas podem abrir offline. Imagens externas e atendimento pelo WhatsApp precisam de internet.
+- Arquivos da PWA: `manifest.webmanifest`, `sw.js`, `offline.html` e `app-icon-192.png`/`app-icon-512.png`.
+
 ## Vídeos promocionais
 
 Os vídeos promocionais foram baixados pelo proprietário e não são mais hospedados pelo site. Para disponibilizar novos vídeos, adicione os arquivos e atualize a página de downloads antes de publicar.
