@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#06120E">
+    <meta name="robots" content="noindex">
+    <title>Baixar vídeo | Bem Presente</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <style>
+      :root {
+        color-scheme: dark;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #f7f3e9;
+        background: #06120e;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        display: grid;
+        min-height: 100vh;
+        margin: 0;
+        padding: 24px;
+        place-items: center;
+        background: radial-gradient(ellipse at top, #18372b, #06120e 68%);
+      }
+
+      main {
+        width: min(100%, 560px);
+        padding: clamp(28px, 7vw, 52px);
+        border: 1px solid rgba(240, 201, 104, 0.25);
+        border-radius: 24px;
+        background: rgba(12, 31, 24, 0.9);
+        text-align: center;
+        box-shadow: 0 24px 70px rgba(0, 0, 0, 0.3);
+      }
+
+      .brand {
+        margin: 0 0 12px;
+        color: #f0c968;
+        font-weight: 800;
+        letter-spacing: 0.16em;
+      }
+
+      h1 {
+        margin: 0;
+        font: 700 clamp(32px, 7vw, 46px)/1.1 Georgia, serif;
+      }
+
+      p {
+        margin: 16px 0 28px;
+        color: #c5cfc8;
+        line-height: 1.6;
+      }
+
+      .download {
+        display: inline-flex;
+        min-height: 54px;
+        align-items: center;
+        justify-content: center;
+        padding: 14px 24px;
+        border-radius: 999px;
+        background: linear-gradient(135deg, #f0c968, #c99b35);
+        color: #102018;
+        font-weight: 800;
+        text-decoration: none;
+      }
+
+      .download:focus-visible,
+      .back:focus-visible {
+        outline: 3px solid #fff;
+        outline-offset: 4px;
+      }
+
+      .hint {
+        margin-bottom: 0;
+        font-size: 14px;
+      }
+
+      .back {
+        display: inline-block;
+        margin-top: 24px;
+        color: #f0c968;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <p class="brand">BEM PRESENTE</p>
+      <h1>Seu vídeo está pronto</h1>
+      <p>Clique no botão abaixo para baixar o vídeo promocional no computador.</p>
+      <a class="download" href="video-anuncio-bem-presente.mp4" download="video-bem-presente.mp4">Baixar vídeo MP4</a>
+      <p class="hint">Se o download não começar, clique com o botão direito no botão e escolha “Salvar link como…”.</p>
+      <a class="back" href="https://lojabempresente.com.br/">Voltar para a loja</a>
+    </main>
+  </body>
+</html>
